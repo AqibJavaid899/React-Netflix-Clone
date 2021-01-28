@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+# Working URL of the application
+## Firebase: https://my-netflix-clone-933fa.web.app/
+##Netlify: https://epic-payne-2742d7.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
