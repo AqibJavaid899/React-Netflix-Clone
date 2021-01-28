@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import genreURL from "./requests";
 import Row from "./Row";
 import Banner from "./Banner";
+import NavBar from "./NavBar";
 
 function App() {
   return (
     <div className="app">
       {/* NavBar Component */}
+      <NavBar />
 
       {/* Banner Component */}
       <Banner />
