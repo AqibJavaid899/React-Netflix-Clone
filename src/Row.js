@@ -31,22 +31,17 @@ const Row = (props) => {
   const handleMovieClick = (movie) => {
     // IF trailer is already playing then clicking it on the thumbnail will close the trailer
     if (trailerId) {
-      console.log("Emptying the setTrailer!!");
       setTrailerId("");
     } else {
       /*function 'movieTrailer()' will search the trailer of the 
         movie/series by name on the Youtube */
       movieTrailer(movie?.name || movie?.title || "")
         .then((url) => {
-          console.log("URL is ", url);
-          console.log(typeof trailerId);
-
           // https://www.youtube.com/watch?v=D6or2gdrHRE
           const urlParams = new URLSearchParams(new URL(url).search);
 
           // .get() will search for any string after the '?' in the trailer URL
-          const id = urlParams.get("v"); // Here (v=D6or2gdrHRE) so it returns 'D6or2gdrHRE'
-          setTrailerId(urlParams.get("v"));
+          setTrailerId(urlParams.get("v")); // Here (v=D6or2gdrHRE) so it returns 'D6or2gdrHRE'
         })
         .catch((err) => console.log(err));
     }
